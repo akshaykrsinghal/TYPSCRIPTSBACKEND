@@ -1,8 +1,9 @@
 const dbConfig = require("../config/db.config.js");
+require('dotenv').config();
 
 const Sequelize = require("sequelize");
-console.log(process.env)
-const sequelize = new Sequelize(process.env.React_APP_DB,process.env.REACT_APP_USER,process.env.PASSWORD,{
+//console.log(process.env)
+const sequelize = new Sequelize(process.env.REACT_APP_USER,process.env.REACT_APP_DB,process.env.REACT_APP_PASSWORD,{
   host:process.env.REACT_APP_HOST,
   logging:false,
   dialect:'mysql'
